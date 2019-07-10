@@ -11,5 +11,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface QuestionRepository extends JpaRepository<Question, Long> {
   // SELECT * FROM question WHERE description LIKE '%?%';
-  List<Question> findAllByDescContaining(String description);
+  List<Question> findAllByDescriptionContaining(String description);
+
+  List<Question> findByUserId(long userId);
 }

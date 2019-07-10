@@ -13,7 +13,7 @@ import javax.persistence.Id;
 public class Question {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  private long id;
 
   @Column(name = "description")
   private String description;
@@ -21,11 +21,11 @@ public class Question {
   @Column(name = "user_id")
   private String user_id;
 
-  public Long getId() {
+  public long getId() {
     return this.id;
   }
 
-  public void setId(Long id) {
+  public void setId(long id) {
     this.id = id;
   }
 
